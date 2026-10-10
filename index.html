@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clé &amp; Cadre — studio photo et vidéo pour locations courte durée</title>
+<meta name="description" content="Clé &amp; Cadre : reportage photo, vidéo verticale et texte d'annonce pour locations courte durée à Lille et en région parisienne.">
+<style>
+/* Polices servies par le site lui-même (OFL, licences dans polices/) : la page ne charge rien d'ailleurs. */
+@font-face{font-family:"Archivo";font-style:normal;font-weight:500;font-display:swap;src:url(polices/archivo-medium.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:600;font-display:swap;src:url(polices/archivo-semibold.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:700;font-display:swap;src:url(polices/archivo-bold.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:800;font-display:swap;src:url(polices/archivo-extrabold.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:900;font-display:swap;src:url(polices/archivo-black.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:200 800;font-display:swap;src:url(polices/newsreader.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:200 800;font-display:swap;src:url(polices/newsreader-italique.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:100 800;font-display:swap;src:url(polices/jetbrains-mono.woff2) format("woff2")}:root{
+  --paper:#F5F1E8; --surface:#FDFBF6; --sunken:#EDE7D9;
+  --ink:#211D16; --ink-soft:#4C463B; --muted:#7C7565;
+  --line:#E2D9C6; --line-strong:#CDC1A8;
+  --brass:#9A6B18; --brass-deep:#5E4522;
+  --shadow:0 1px 2px rgba(33,29,22,.05), 0 12px 30px -16px rgba(33,29,22,.22);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#161309; --surface:#1F1B11; --sunken:#241F13;
+  --ink:#F0EADC; --ink-soft:#C0B7A2; --muted:#8A8270;
+  --line:#302A1B; --line-strong:#453D28;
+  --brass:#E0B15A; --brass-deep:#C99B45;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 14px 34px -18px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  --paper:#161309; --surface:#1F1B11; --sunken:#241F13;
+  --ink:#F0EADC; --ink-soft:#C0B7A2; --muted:#8A8270;
+  --line:#302A1B; --line-strong:#453D28;
+  --brass:#E0B15A; --brass-deep:#C99B45;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 14px 34px -18px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.6;font-optical-sizing:auto;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1}
+.wrap{max-width:880px;margin:0 auto;padding:0 clamp(20px,5vw,52px)}
+h1,h2{font-family:"Archivo",system-ui,sans-serif;text-wrap:balance;margin:0;letter-spacing:-.02em}
+.eyebrow{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);font-weight:500}
+a{color:inherit}
+.topbar{border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:14px}
+.logo{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.02rem;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+.logo .amp{color:var(--brass)}
+.logo .frame{width:16px;height:16px;border:2px solid var(--brass);border-radius:3px;flex:none}
+.tbtn{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);background:var(--surface);border:1px solid var(--line-strong);padding:7px 10px;border-radius:7px;cursor:pointer}
+.hero{padding:clamp(56px,10vw,120px) 0 clamp(40px,6vw,72px)}
+.hero .eyebrow{display:block;margin-bottom:20px}
+.hero h1{font-weight:900;font-size:clamp(2.2rem,6vw,4rem);line-height:1.02;max-width:18ch}
+.hero .sub{font-size:clamp(1.08rem,2.2vw,1.35rem);color:var(--ink-soft);max-width:44ch;margin:22px 0 0;line-height:1.45}
+.actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:32px}
+.cta-btn{font-family:"Archivo",sans-serif;font-weight:700;font-size:1rem;background:var(--brass);color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;display:inline-block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cta-btn{color:#1a1305}}
+:root[data-theme="dark"] .cta-btn{color:#1a1305}
+.cta-btn:hover{background:var(--brass-deep)}
+.ghost{font-family:"Archivo",sans-serif;font-weight:600;font-size:.95rem;color:var(--ink);text-decoration:none;padding:11px 16px;border:1px solid var(--line-strong);border-radius:8px}
+.ghost:hover{border-color:var(--brass)}
+.points{list-style:none;margin:0;padding:clamp(28px,4vw,40px) 0 clamp(44px,6vw,72px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:720px){.points{grid-template-columns:1fr;gap:14px}}
+.points b{display:block;font-family:"Archivo",sans-serif;font-weight:700;font-size:1.02rem;margin-bottom:4px}
+.points span{color:var(--ink-soft);font-size:.98rem}
+footer{border-top:1px solid var(--line);padding:28px 0 44px}
+.legal{font-family:"JetBrains Mono",monospace;font-size:.68rem;line-height:1.8;color:var(--muted);margin:0}
+.legal a{color:var(--brass)}
+:focus-visible{outline:2.5px solid var(--brass);outline-offset:2px;border-radius:4px}
+@media (forced-colors:active){.cta-btn,.ghost{border:1px solid CanvasText}}
+</style>
+
+<div class="topbar"><div class="wrap">
+  <div class="logo"><span class="frame"></span>Clé <span class="amp">&amp;</span> Cadre</div>
+  <button class="tbtn" id="themeBtn">Thème</button>
+</div></div>
+
+<main>
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Photo &amp; vidéo · locations courte durée · Lille</span>
+  <h1>L'annonce qui loue, pas juste des photos.</h1>
+  <p class="sub">Reportage photo, vidéo verticale et texte d'annonce réécrit pour votre location courte durée : Airbnb, Booking, gîtes.</p>
+  <div class="actions">
+    <a class="cta-btn" href="studio.html">Voir l'offre et les formules</a>
+    <a class="ghost" href="studio.html#devis">Demander un devis</a>
+  </div>
+</div></header>
+
+<div class="wrap">
+  <ul class="points">
+    <li><b>Des images réelles</b><span>Photos retouchées, sans image générée par IA ni mise en scène truquée.</span></li>
+    <li><b>Toutes vos plateformes</b><span>Fichiers livrés au bon format pour Airbnb, Booking, les gîtes et vos réseaux.</span></li>
+    <li><b>Lille et région parisienne</b><span>Reportage sur place, livraison sous 5 jours ouvrés.</span></li>
+  </ul>
+</div>
+</main>
+
+<footer><div class="wrap">
+  <p class="legal"><b>Clé &amp; Cadre</b> — Édouard Lantenois, photographe &amp; vidéaste · Lille (MEL) &amp; région parisienne.<br>
+  Contact : <a href="mailto:contact@oktako.fr">contact@oktako.fr</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a> · Ce site ne dépose aucun cookie.</p>
+</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  function lab(){var c=root.getAttribute('data-theme');btn.textContent=c==='light'?'Clair':c==='dark'?'Sombre':'Auto';}
+  lab();
+  btn.addEventListener('click',function(){var c=root.getAttribute('data-theme');if(!c)root.setAttribute('data-theme','light');else if(c==='light')root.setAttribute('data-theme','dark');else root.removeAttribute('data-theme');lab();});
+})();
+</script>

@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clé &amp; Cadre</title>
+<meta name="description" content="Reportage photo et vidéo verticale pour locations courte durée à Lille : l'annonce qui loue, pas juste des photos.">
+<style>
+/* Polices servies par le site lui-même (OFL, licences dans polices/) : la page ne charge rien d'ailleurs. */
+@font-face{font-family:"Archivo";font-style:normal;font-weight:500;font-display:swap;src:url(polices/archivo-medium.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:600;font-display:swap;src:url(polices/archivo-semibold.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:700;font-display:swap;src:url(polices/archivo-bold.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:800;font-display:swap;src:url(polices/archivo-extrabold.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:900;font-display:swap;src:url(polices/archivo-black.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:200 800;font-display:swap;src:url(polices/newsreader.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:200 800;font-display:swap;src:url(polices/newsreader-italique.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:100 800;font-display:swap;src:url(polices/jetbrains-mono.woff2) format("woff2")}
+:root{
+  --paper:#F5F1E8; --surface:#FDFBF6; --sunken:#EDE7D9;
+  --ink:#211D16; --ink-soft:#4C463B; --muted:#7C7565;
+  --line:#E2D9C6; --line-strong:#CDC1A8;
+  --brass:#9A6B18; --brass-deep:#5E4522; --brass-soft:#B98A2E;
+  --shadow:0 1px 2px rgba(33,29,22,.05), 0 12px 30px -16px rgba(33,29,22,.22);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#161309; --surface:#1F1B11; --sunken:#241F13;
+  --ink:#F0EADC; --ink-soft:#C0B7A2; --muted:#8A8270;
+  --line:#302A1B; --line-strong:#453D28;
+  --brass:#E0B15A; --brass-deep:#C99B45; --brass-soft:#D2A54A;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 14px 34px -18px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  --paper:#161309; --surface:#1F1B11; --sunken:#241F13;
+  --ink:#F0EADC; --ink-soft:#C0B7A2; --muted:#8A8270;
+  --line:#302A1B; --line-strong:#453D28;
+  --brass:#E0B15A; --brass-deep:#C99B45; --brass-soft:#D2A54A;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 14px 34px -18px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.6;font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,52px)}
+h1,h2,h3,h4{font-family:"Archivo",system-ui,sans-serif;text-wrap:balance;margin:0;letter-spacing:-.02em}
+.mono,.eyebrow,.price,.tag,.badge{font-family:"JetBrains Mono",ui-monospace,monospace}
+.eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);font-weight:500}
+a{color:inherit}
+.topbar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:14px}
+.logo{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.02rem;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+.logo .amp{color:var(--brass)}
+.logo .frame{width:16px;height:16px;border:2px solid var(--brass);border-radius:3px;flex:none}
+.tnav{display:flex;gap:4px}
+.tnav a{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--muted);text-decoration:none;padding:6px 9px;border-radius:6px}
+.tnav a:hover{color:var(--ink);background:var(--sunken)}
+.tbtn{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);background:var(--surface);border:1px solid var(--line-strong);padding:7px 10px;border-radius:7px;cursor:pointer}
+.cta-btn{font-family:"Archivo",sans-serif;font-weight:700;font-size:.9rem;background:var(--brass);color:#fff;border:none;padding:10px 18px;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block}
+:root[data-theme="dark"] .cta-btn,:root:not([data-theme="light"]) .cta-btn{color:#1a1305}
+.cta-btn:hover{background:var(--brass-deep)}
+@media(max-width:720px){.tnav{display:none}}
+
+.hero{padding:clamp(48px,8vw,96px) 0 clamp(36px,5vw,60px)}
+.hero .eyebrow{margin-bottom:20px;display:block}
+.hero h1{font-weight:900;font-size:clamp(2.3rem,6vw,4.3rem);line-height:1.02}
+.hero .sub{font-size:clamp(1.08rem,2.2vw,1.4rem);color:var(--ink-soft);max-width:40ch;margin:22px 0 0;line-height:1.4}
+.hero .sub .src{font-size:.8em;color:var(--muted)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:30px}
+.ghost{font-family:"Archivo",sans-serif;font-weight:600;font-size:.9rem;color:var(--ink);text-decoration:none;padding:10px 16px;border:1px solid var(--line-strong);border-radius:8px}
+.ghost:hover{border-color:var(--brass)}
+.hero-frames{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.frame-tile{aspect-ratio:4/5;border-radius:12px;border:1px solid var(--line);background:
+  linear-gradient(135deg,color-mix(in srgb,var(--brass) 16%,var(--surface)),var(--sunken));
+  display:flex;flex-direction:column;justify-content:flex-end;padding:14px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.frame-tile::before{content:"";position:absolute;inset:10px;border:1.5px solid color-mix(in srgb,var(--brass) 32%,transparent);border-radius:8px}
+.frame-tile .cap{font-family:"JetBrains Mono",monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--brass-deep);position:relative}
+.frame-tile:nth-child(2){aspect-ratio:4/5;transform:translateY(-14px)}
+@media(max-width:640px){.hero-frames{grid-template-columns:1fr 1fr}.frame-tile:nth-child(3){display:none}.frame-tile:nth-child(2){transform:none}}
+
+section{padding:clamp(44px,6vw,76px) 0;border-top:1px solid var(--line)}
+.sec-eyebrow{margin-bottom:12px;display:block}
+.sec-h{font-weight:800;font-size:clamp(1.6rem,3.6vw,2.3rem);line-height:1.05;max-width:22ch}
+.sec-lede{color:var(--ink-soft);font-size:1.1rem;margin-top:14px;max-width:56ch}
+
+.props{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px}
+@media(max-width:680px){.props{grid-template-columns:1fr}}
+.prop{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:var(--shadow)}
+.prop h3{font-size:1.12rem;font-weight:700;margin-bottom:8px}
+.prop p{margin:0;color:var(--ink-soft);font-size:.98rem}
+
+.pkgs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px;align-items:stretch}
+@media(max-width:820px){.pkgs{grid-template-columns:1fr}}
+.pkg{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 24px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.pkg.feat{border:2px solid var(--brass);position:relative}
+.pkg.feat::before{content:"Le cœur de l'offre";position:absolute;top:-11px;left:24px;background:var(--brass);color:#fff;font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:20px;font-weight:700}
+:root[data-theme="dark"] .pkg.feat::before,:root:not([data-theme="light"]) .pkg.feat::before{color:#1a1305}
+.pkg .pname{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.pkg .price{font-family:"Archivo",sans-serif;font-weight:900;font-size:2.4rem;margin:12px 0 4px;letter-spacing:-.03em}
+.pkg .pfor{font-size:.9rem;color:var(--muted);min-height:3.4em;margin-bottom:16px}
+.pkg ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:9px}
+.pkg li{position:relative;padding-left:24px;font-size:.93rem;color:var(--ink-soft);line-height:1.42}
+.pkg li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:8px;border-left:2px solid var(--brass);border-bottom:2px solid var(--brass);transform:rotate(-45deg)}
+.pkg .pcta{margin-top:auto}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;counter-reset:st}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:var(--shadow)}
+.step .stn{width:32px;height:32px;border-radius:8px;background:var(--brass);color:#fff;font-family:"Archivo",sans-serif;font-weight:800;display:grid;place-items:center;margin-bottom:14px}
+:root[data-theme="dark"] .step .stn,:root:not([data-theme="light"]) .step .stn{color:#1a1305}
+.step h4{font-size:1.02rem;font-weight:700;margin-bottom:7px}
+.step p{margin:0;color:var(--ink-soft);font-size:.94rem}
+
+.about{display:grid;grid-template-columns:1.3fr .9fr;gap:40px;align-items:start}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:24px}}
+.about .bio{font-size:1.12rem;line-height:1.6}
+.proof{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.proof li{list-style:none;display:flex;gap:11px;align-items:flex-start;font-size:.95rem;color:var(--ink-soft)}
+.proof li .b{width:7px;height:7px;border-radius:50%;background:var(--brass);flex:none;margin-top:8px}
+.posit{margin-top:30px;border-left:3px solid var(--brass);background:var(--sunken);padding:18px 22px;border-radius:0 12px 12px 0;font-style:italic;font-size:1.05rem;color:var(--ink)}
+
+.faq{margin-top:30px;display:grid;gap:10px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+details.q summary{cursor:pointer;padding:18px 22px;font-family:"Archivo",sans-serif;font-weight:700;font-size:1.02rem;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::after{content:"+";font-family:"JetBrains Mono",monospace;color:var(--brass);font-size:1.3rem;flex:none}
+details.q[open] summary::after{content:"–"}
+details.q .a{padding:0 22px 20px;color:var(--ink-soft);font-size:.98rem}
+
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(26px,4vw,44px);box-shadow:var(--shadow);text-align:center;margin-top:10px}
+.contact h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800}
+.contact p{color:var(--ink-soft);max-width:46ch;margin:14px auto 0}
+.form{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.form input,.form select{font-family:"Newsreader",serif;font-size:1rem;padding:11px 14px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);min-width:0}
+.form input{flex:1 1 190px}
+.form .go{flex:1 1 100%;max-width:280px;margin:4px auto 0}
+.note{font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--muted);margin-top:14px}
+
+footer{padding:44px 0 60px;border-top:1px solid var(--line);margin-top:20px}
+.legal{font-family:"JetBrains Mono",monospace;font-size:.68rem;line-height:1.8;color:var(--muted)}
+.legal b{color:var(--ink-soft)}
+.legal .fill{color:var(--brass-deep)}
+:focus-visible{outline:2.5px solid var(--brass);outline-offset:2px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (forced-colors:active){.prop,.pkg,.step,.contact,.frame-tile,details.q{border:1px solid CanvasText}}
+</style>
+
+<div class="topbar"><div class="wrap">
+  <div class="logo"><span class="frame"></span>Clé <span class="amp">&amp;</span> Cadre</div>
+  <nav class="tnav"><a href="#offre">Formules</a><a href="#methode">Méthode</a><a href="#apropos">À propos</a><a href="#faq">FAQ</a></nav>
+  <div style="display:flex;gap:8px;align-items:center">
+    <button class="tbtn" id="themeBtn">Thème</button>
+    <a class="cta-btn" href="#devis">Devis</a>
+  </div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Photo &amp; vidéo · locations courte durée · Lille</span>
+  <h1>Des visuels qui donnent envie de réserver, pas seulement de regarder.</h1>
+  <p class="sub">Reportage photo et vidéo verticale pour votre location courte durée — Airbnb, Booking, gîtes. Une annonce avec des photos pro peut rapporter jusqu'à +21 % de revenus et jusqu'à +19 % de réservations. <span class="src">(source : Airbnb)</span></p>
+  <div class="hero-actions">
+    <a class="cta-btn" href="#devis" style="padding:12px 22px;font-size:1rem">Demander un devis</a>
+    <a class="ghost" href="#offre">Voir les formules</a>
+  </div>
+  <div class="hero-frames" aria-hidden="true">
+    <div class="frame-tile"><span class="cap">Séjour · lumière du matin</span></div>
+    <div class="frame-tile"><span class="cap">Vidéo verticale 9:16</span></div>
+    <div class="frame-tile"><span class="cap">Détail · l'ambiance</span></div>
+  </div>
+</div></header>
+
+<section id="pourquoi"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">Ce qui me distingue</span>
+  <h2 class="sec-h">Je raconte votre lieu. Je ne le liste pas.</h2>
+  <div class="props">
+    <div class="prop"><h3>Ce qui déclenche la réservation</h3><p>Chaque image montre ce qui fait réserver : la lumière du matin, le coin où l'on pose son café, la vue depuis le lit. Une histoire, pas un inventaire de pièces.</p></div>
+    <div class="prop"><h3>Photo et vidéo verticale</h3><p>Vous repartez avec des photos retouchées et, à partir de la formule complète, une vidéo 9:16 pour Reels, TikTok et Stories. Le programme gratuit d'Airbnb s'arrête à la photo, sur invitation, et ne couvre ni Booking ni les gîtes.</p></div>
+    <div class="prop"><h3>Un reportage, toutes vos plateformes</h3><p>Airbnb, Booking, Abritel, votre propre site : les fichiers sont à vous, livrés au bon format pour chaque support. Aucune dépendance à une seule plateforme.</p></div>
+    <div class="prop"><h3>Des images 100 % réelles</h3><p>Aucune image générée par IA, aucun home-staging truqué. Votre bien tel qu'il est, mis en valeur par la lumière et le cadrage — ce qui évite les mauvaises surprises et les avis déçus à l'arrivée.</p></div>
+  </div>
+</div></section>
+
+<section id="offre"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">Formules · prix nets, sans TVA (micro-entreprise)</span>
+  <h2 class="sec-h">Deux façons de mettre votre bien en lumière.</h2>
+  <div class="pkgs">
+    <div class="pkg feat">
+      <div class="pname">Essentiel</div>
+      <div class="price">190 €</div>
+      <div class="pfor">Un premier bien ou un studio, un hôte qui gère son annonce lui-même.</div>
+      <ul>
+        <li>Reportage photo pro sur place (≈1 h) : 12 à 15 photos HDR retouchées</li>
+        <li>Titre d'annonce + accroche (≈150 mots) réécrits pour donner envie</li>
+        <li>Cadré pour Airbnb, Booking et les gîtes, prêt web et impression</li>
+        <li>Vidéo verticale : à partir de la formule complète</li>
+        <li>Livraison sous 5 jours ouvrés</li>
+      </ul>
+      <a class="cta-btn pcta" href="#devis">Choisir l'Essentiel</a>
+    </div>
+    <div class="pkg">
+      <div class="pname">L'Annonce qui loue</div>
+      <div class="price">390 €</div>
+      <div class="pfor">L'hôte qui veut une annonce qui convertit sur toutes les plateformes et de quoi alimenter ses réseaux.</div>
+      <ul>
+        <li>Reportage photo (1 h 30 à 2 h) : 25 photos HDR retouchées, espaces + détails</li>
+        <li>Texte d'annonce entièrement réécrit et relu par un humain (400 à 500 mots)</li>
+        <li>5 vidéos verticales 9:16 prêtes pour Reels, TikTok, Stories</li>
+        <li>Optimisé pour Airbnb, Booking ET Gîtes de France</li>
+        <li>100 % réel, aucune image générée par IA · livraison sous 5 jours ouvrés</li>
+      </ul>
+      <a class="cta-btn pcta" href="#devis" style="background:transparent;color:var(--brass);border:1px solid var(--brass)">Choisir L'Annonce qui loue</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="methode"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">La méthode</span>
+  <h2 class="sec-h">Vous n'avez rien à gérer. Trois étapes, c'est en ligne.</h2>
+  <div class="steps">
+    <div class="step"><div class="stn">1</div><h4>On prépare (15 min au téléphone)</h4><p>On parle de votre bien, de ce qui le distingue et des voyageurs que vous visez. Je vous envoie une check-list simple pour préparer les lieux.</p></div>
+    <div class="step"><div class="stn">2</div><h4>Reportage sur place (1 à 2 h)</h4><p>Photo et vidéo verticale. Je m'occupe des cadrages, de la lumière et du rythme.</p></div>
+    <div class="step"><div class="stn">3</div><h4>Livraison sous 5 jours ouvrés</h4><p>Photos retouchées et vidéos prêtes à publier, dans chaque format utile. Vous mettez votre annonce à jour dans la foulée.</p></div>
+  </div>
+</div></section>
+
+<section id="apropos"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">À propos</span>
+  <div class="about">
+    <div>
+      <h2 class="sec-h" style="margin-bottom:18px">Journaliste, photographe, et un peu développeur.</h2>
+      <p class="bio">Je m'appelle Édouard Lantenois. Pendant des années, j'ai été photojournaliste pour La Voix du Nord, Le Progrès et d'autres quotidiens, avec plus de 300 reportages où tout le métier consiste à capter en quelques images ce qui fait l'histoire d'un lieu. Je mets aujourd'hui cet œil au service de votre location : montrer ce qui donne vraiment envie de réserver, sur toutes les plateformes. Développeur de formation (école 42), je peux aussi vous aider à aller plus loin qu'une simple annonce quand vous en avez besoin.</p>
+      <div class="posit">Le programme photo d'Airbnb est gratuit, mais sur invitation et limité à Airbnb. Moi, je livre à tout hôte une annonce complète — photos pro, texte réécrit et vidéos verticales — qui loue aussi sur Booking, les gîtes et les réseaux.</div>
+    </div>
+    <ul class="proof">
+      <li><span class="b"></span>300+ reportages photo, vidéo et écrit publiés</li>
+      <li><span class="b"></span>Photojournaliste : La Voix du Nord, Le Progrès, L'Union, Le Télégramme</li>
+      <li><span class="b"></span>Je cadre pour raconter, pas pour remplir</li>
+      <li><span class="b"></span>À la fois journaliste et développeur (école 42)</li>
+      <li><span class="b"></span>Basé à Lille, mobile en région parisienne</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">FAQ</span>
+  <h2 class="sec-h">Les questions qu'on me pose le plus souvent.</h2>
+  <div class="faq">
+    <details class="q"><summary>Sous quel délai je reçois mes photos, mon texte et mes vidéos ?</summary><div class="a">Le shoot dure 1 à 2 h sur place. Vous recevez l'ensemble — photos retouchées, texte d'annonce et vidéos verticales — sous 5 jours ouvrés.</div></details>
+    <details class="q"><summary>À qui appartiennent les photos et les vidéos ? Puis-je les utiliser partout ?</summary><div class="a">Vous recevez une licence d'usage illimitée dans le temps pour toutes vos annonces et vos réseaux : Airbnb, Booking, Gîtes de France, Instagram, TikTok, votre site. En tant qu'auteur je conserve le droit moral (une mention est bienvenue mais non obligatoire) et le droit d'en montrer une sélection dans mon portfolio. La revente ou la cession à un tiers reste exclue sans accord écrit.</div></details>
+    <details class="q"><summary>Vous intervenez dans quelle zone ?</summary><div class="a">Lille et toute la métropole (MEL) sans frais de déplacement. Au-delà — reste du Nord, Pas-de-Calais et région parisienne où je me déplace régulièrement — frais de route au réel (0,40 €/km) ou forfait indiqué sur le devis.</div></details>
+    <details class="q"><summary>Qu'est-ce que je dois préparer avant le shoot ?</summary><div class="a">Le logement propre, rangé et en configuration « prêt à louer » : lits faits, surfaces dégagées, poubelles sorties, ampoules qui fonctionnent, et si possible de la lumière du jour. Le reste — mise en scène légère et réglages — je m'en occupe. Un court brief sur votre bien et votre clientèle cible m'aide à écrire un texte juste.</div></details>
+    <details class="q"><summary>Comment se passe le paiement ?</summary><div class="a">Je travaille en micro-entreprise : TVA non applicable (art. 293 B du CGI), les prix affichés sont donc nets. Acompte de 30 % à la réservation pour bloquer la date, solde à la livraison, par virement ou lien de paiement. Facture fournie systématiquement.</div></details>
+  </div>
+</div></section>
+
+<section id="devis"><div class="wrap">
+  <div class="contact">
+    <span class="eyebrow">Premier bien à −50 % pour lancer</span>
+    <h2>Parlons de votre location.</h2>
+    <p>Dites-moi le type de bien et sa ville, je reviens vers vous avec un créneau et un devis. Réponse le jour même.</p>
+    <form class="form" id="devisForm">
+      <input type="text" id="f-nom" placeholder="Votre prénom" aria-label="Prénom" required>
+      <input type="text" id="f-bien" placeholder="Type de bien (studio, T2, gîte…)" aria-label="Type de bien">
+      <input type="text" id="f-ville" placeholder="Ville / quartier" aria-label="Ville">
+      <button class="cta-btn go" type="submit">Envoyer ma demande</button>
+    </form>
+    <p class="note">Le bouton ouvre votre messagerie avec le message pré-rempli, adressé à contact@oktako.fr. Aucune donnée n'est stockée par ce site.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p class="legal">
+    <b>Clé &amp; Cadre</b> — Édouard Lantenois, photographe &amp; vidéaste · Lille (MEL) &amp; région parisienne.<br>
+    Contact : <a href="mailto:contact@oktako.fr">contact@oktako.fr</a><br>
+    <b><a href="mentions-legales.html">Mentions légales</a></b> — Micro-entrepreneur, TVA non applicable (art. 293 B du CGI). SIRET : <span class="fill" data-profil="siret">13081114400018</span> · Hébergeur : <span class="fill" data-hebergeur="nom">GitHub, Inc.</span>.<br>
+    CGV fournies au devis · <a href="confidentialite.html">politique de confidentialité</a>.
+  </p>
+</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  function lab(){var c=root.getAttribute('data-theme');btn.textContent=c==='light'?'Clair':c==='dark'?'Sombre':'Auto';}
+  lab();
+  btn.addEventListener('click',function(){
+    var c=root.getAttribute('data-theme');
+    if(!c)root.setAttribute('data-theme','light');
+    else if(c==='light')root.setAttribute('data-theme','dark');
+    else root.removeAttribute('data-theme');
+    lab();
+  });
+  document.getElementById('devisForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var nom=document.getElementById('f-nom').value||'';
+    var bien=document.getElementById('f-bien').value||'';
+    var ville=document.getElementById('f-ville').value||'';
+    var sujet=encodeURIComponent('Demande de devis — Clé & Cadre');
+    var corps=encodeURIComponent('Bonjour Édouard,\n\nJe souhaite un devis pour mettre en valeur mon bien.\n\nPrénom : '+nom+'\nType de bien : '+bien+'\nVille / quartier : '+ville+'\n\nMerci !');
+    window.location.href='mailto:contact@oktako.fr?subject='+sujet+'&body='+corps;
+  });
+})();
+</script>
